@@ -1,6 +1,6 @@
 # Cheesecake Factory Calorie Calculator
 
-WordPress plugin: import a CSV menu dataset and display a <a href="google.com">calorie calculator</a> via shortcode. No external API calls on the frontend—data is loaded from your site database with the page.
+WordPress plugin: import a CSV menu dataset and display a <a href="(https://www.etsy.com/listing/4447583780/lavender-crochet-pattern-pdf-easy?ls=a&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=lavender+crochet+pattern&ref=sc_gallery-1-1&sr_prefetch=1&pf_from=search&pro=1&bes=1&sts=1&dd=1&plkey=EueNzn3YsYaWS9bVhoqIz2W3sN83%3ALTb548252361d3c9d3f80d18d6fb5a90aa51c36c63)">calorie calculator</a> via shortcode. No external API calls on the frontend—data is loaded from your site database with the page.
 
 ## Requirements
 
