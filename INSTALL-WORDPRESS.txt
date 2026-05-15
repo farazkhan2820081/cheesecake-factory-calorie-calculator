@@ -1,0 +1,38 @@
+WORDPRESS UPLOAD — READ THIS FIRST
+==================================
+
+Use this ONE zip file only. Do not unzip it and then zip only the files inside
+(that confuses WordPress). Do not put a zip inside another zip.
+
+CORRECT LAYOUT (what WordPress expects)
+----------------------------------------
+When you open the zip, the FIRST thing you should see is ONE folder:
+
+  cheesecake-factory-calorie-calculator/
+
+Open that folder. Inside you should see:
+
+  cheesecake-factory-calorie-calculator.php   ← main plugin file (required)
+  includes/
+  public/
+  README.md
+  (other files)
+
+STEPS
+-----
+1. WordPress admin → Plugins → Add New → Upload Plugin.
+2. Choose the zip whose name ends in ...-WORDPRESS-UPLOAD.zip (from your download).
+3. Install Now → Activate.
+
+If WordPress says "Plugin file does not exist" when you click Activate:
+1. Delete the plugin completely first: Plugins → find it → Deactivate → Delete.
+   (A broken half-install leaves a wrong path in the database.)
+2. Upload again using ONLY: cheesecake-factory-calorie-calculator-WORDPRESS-UPLOAD.zip
+   from this project (built with build-wordpress-zip.ps1 — forward slashes).
+   Do NOT use Windows "Compress to zip" on the plugin folder for Linux hosting;
+   that zip often uses backslashes and the server extracts the wrong paths.
+
+If WordPress says the plugin could not be found on upload:
+- Wrong zip structure (files at the top with no folder, or two nested folders).
+  Open the zip: first entry must be folder cheesecake-factory-calorie-calculator/
+  then the .php file inside it.

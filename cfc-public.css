@@ -1,0 +1,241 @@
+/**
+ * Cheesecake Factory Calorie Calculator — public styles.
+ */
+
+/* JSON payload for the calculator (not visible). */
+.cfc-config-json {
+	display: none !important;
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.cfc-calculator {
+	--cfc-bg: #faf8f5;
+	--cfc-card: #ffffff;
+	--cfc-border: #e8e4dc;
+	--cfc-text: #2c2c2c;
+	--cfc-muted: #6b6560;
+	--cfc-accent: #8b4513;
+	--cfc-accent-hover: #6d3610;
+	--cfc-radius: 10px;
+	--cfc-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+	max-width: 920px;
+	margin: 1.5rem auto;
+	padding: 0;
+	color: var(--cfc-text);
+	font-size: 16px;
+	line-height: 1.45;
+}
+
+.cfc-calculator--empty .cfc-msg {
+	margin: 0;
+	padding: 1rem 1.25rem;
+	background: #fff8e6;
+	border: 1px solid #f0e0b4;
+	border-radius: var(--cfc-radius);
+}
+
+.cfc-calculator__controls {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem 1.25rem;
+	padding: 1.25rem;
+	background: var(--cfc-card);
+	border: 1px solid var(--cfc-border);
+	border-radius: var(--cfc-radius);
+	box-shadow: var(--cfc-shadow);
+	margin-bottom: 1.25rem;
+}
+
+@media (min-width: 720px) {
+	.cfc-calculator__controls {
+		grid-template-columns: 1.2fr 1.2fr 100px 140px;
+		align-items: end;
+	}
+}
+
+.cfc-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.cfc-field--btn {
+	justify-content: flex-end;
+}
+
+.cfc-label {
+	font-weight: 600;
+	font-size: 0.85rem;
+	color: var(--cfc-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.cfc-select,
+.cfc-input {
+	width: 100%;
+	max-width: 100%;
+	padding: 0.65rem 0.75rem;
+	border: 1px solid var(--cfc-border);
+	border-radius: 8px;
+	background: #fff;
+	color: var(--cfc-text);
+	font-size: 1rem;
+	box-sizing: border-box;
+}
+
+.cfc-select:focus,
+.cfc-input:focus {
+	outline: 2px solid var(--cfc-accent);
+	outline-offset: 1px;
+	border-color: var(--cfc-accent);
+}
+
+.cfc-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.65rem 1rem;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	border: 1px solid transparent;
+	transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.cfc-btn--primary {
+	background: var(--cfc-accent);
+	color: #fff;
+	width: 100%;
+}
+
+.cfc-btn--primary:hover,
+.cfc-btn--primary:focus {
+	background: var(--cfc-accent-hover);
+	color: #fff;
+}
+
+.cfc-btn--ghost {
+	background: transparent;
+	color: var(--cfc-accent);
+	border-color: var(--cfc-border);
+}
+
+.cfc-btn--ghost:hover,
+.cfc-btn--ghost:focus {
+	background: var(--cfc-bg);
+	border-color: var(--cfc-accent);
+}
+
+.cfc-btn--danger {
+	background: transparent;
+	color: #b32d2e;
+	border: none;
+	padding: 0.35rem 0.5rem;
+	font-size: 0.9rem;
+	text-decoration: underline;
+}
+
+.cfc-btn--danger:hover {
+	color: #7f2122;
+}
+
+.cfc-calculator__summary {
+	padding: 1.25rem;
+	background: var(--cfc-bg);
+	border: 1px solid var(--cfc-border);
+	border-radius: var(--cfc-radius);
+}
+
+.cfc-summary-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-bottom: 1rem;
+}
+
+.cfc-summary-title {
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.cfc-table-wrap {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	border-radius: 8px;
+	border: 1px solid var(--cfc-border);
+	background: var(--cfc-card);
+}
+
+.cfc-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95rem;
+}
+
+.cfc-table th,
+.cfc-table td {
+	padding: 0.65rem 0.75rem;
+	text-align: left;
+	border-bottom: 1px solid var(--cfc-border);
+	vertical-align: middle;
+}
+
+.cfc-table thead th {
+	background: var(--cfc-bg);
+	font-weight: 700;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--cfc-muted);
+}
+
+.cfc-table tbody tr:last-child td {
+	border-bottom: none;
+}
+
+.cfc-table__empty td {
+	text-align: center;
+	color: var(--cfc-muted);
+	font-style: italic;
+	padding: 1.25rem;
+}
+
+.cfc-total {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 2px solid var(--cfc-border);
+	font-size: 1.35rem;
+	display: flex;
+	align-items: baseline;
+	gap: 0.5rem;
+}
+
+.cfc-total__value {
+	color: var(--cfc-accent);
+	font-weight: 800;
+	font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 480px) {
+	.cfc-table th:nth-child(2),
+	.cfc-table td:nth-child(2) {
+		white-space: nowrap;
+	}
+}
